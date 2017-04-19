@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/root/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -57,7 +57,7 @@ export IDEA_VM_OPTION="/home/gmontgomery/.userPrograms/idea-IU-163.9166.29/bin/i
 #export JAVA_HOME="/home/gmontgomery/.userPrograms/jdk1.8.0_121"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
+source ~/.oh-my-zsh/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
