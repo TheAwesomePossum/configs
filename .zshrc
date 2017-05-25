@@ -53,7 +53,7 @@ export PATH="/home/gmontgomery/.userPrograms/jdk1.8.0_121/bin:/usr/local/sbin:/u
 
 export IDEA_VM_OPTION="/home/gmontgomery/.userPrograms/idea-IU-163.9166.29/bin/idea64.vmoptions"
 
-
+export MAVEN_OPTS="-Xmx3000m"
 #export JAVA_HOME="/home/gmontgomery/.userPrograms/jdk1.8.0_121"
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -89,6 +89,9 @@ alias chrome-dev="google-chrome-dev &"
 alias spotify="spotify &"
 alias pidgin="pidgin &"
 alias idea="sh ~/.userPrograms/idea-IU-163.9166.29/bin/idea.sh &"
+alias vblist="vboxmanage list vms"
+alias vbh="vboxheadless -s"
+
 
 alias update-pacman="sudo pacman -Syyu"
 alias update-aur="yaourt -Syu --aur"
@@ -110,4 +113,5 @@ function bluetooth () {
     hidecomputer
     echo Computer Hidden
 }
+
 
