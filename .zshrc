@@ -49,9 +49,8 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/home/gmontgomery/.userPrograms/jdk1.8.0_121/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 
-export IDEA_VM_OPTION="/home/gmontgomery/.userPrograms/idea-IU-163.9166.29/bin/idea64.vmoptions"
+export PYTHONPATH="${PYTHONPATH}:/home/gmontgomery/Projects:/home/gmontgomery/Projects/ReactivePanda"
 
 export MAVEN_OPTS="-Xmx3000m"
 #export JAVA_HOME="/home/gmontgomery/.userPrograms/jdk1.8.0_121"
@@ -88,7 +87,6 @@ alias chrome-unstable="google-chrome-unstable &"
 alias chrome-dev="google-chrome-dev &"
 alias spotify="spotify &"
 alias pidgin="pidgin &"
-alias idea="sh ~/.userPrograms/idea-IU-163.9166.29/bin/idea.sh &"
 alias vblist="vboxmanage list vms"
 alias vbh="vboxheadless -s"
 
@@ -114,4 +112,17 @@ function bluetooth () {
     echo Computer Hidden
 }
 
+function update-home-from-git () {
+    mv ~/.githome ~/.git
+    git pull
+    mv ~/.git ~/.githome
+}
 
+function push-home-to-git () {
+    mv ~/.githome ~/.git
+    git commit -a
+    mv ~/.git ~/.githome
+}
+
+alias vi=vim
+#export PATH =${PATH}:/home/gmontgomery/tizen-studio/*
