@@ -118,6 +118,12 @@ function update-home-from-git () {
     mv ~/.git ~/.githome
 }
 
+function add-to-home-git () {
+    mv ~/.githome ~/.git
+    git add $1
+    mv ~/.git ~/.githome
+}
+
 function push-home-to-git () {
     mv ~/.githome ~/.git
     git commit -a
