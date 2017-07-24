@@ -121,6 +121,7 @@ function update-home-from-git () {
 function push-home-to-git () {
     mv ~/.githome ~/.git
     git commit -a
+    git push
     mv ~/.git ~/.githome
 }
 
