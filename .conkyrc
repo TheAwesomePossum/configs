@@ -1,1 +1,199 @@
-/home/gmontgomery/.conky/conkyrc
+background no 
+    font DroidSans:size=8
+    #xftfont sans:size=10
+    use_xft yes
+    xftalpha 0.9
+    update_interval 1.0
+    total_run_times 0
+    own_window yes
+    own_window_transparent yes
+    own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+    own_window_type normal
+    double_buffer yes
+    minimum_size 500 0
+    maximum_width 225
+    draw_shades no
+    draw_outline no
+    draw_borders no
+    draw_graph_borders yes
+    default_color white
+    default_shade_color black
+    default_outline_color green
+    alignment top_right
+    gap_x 15
+    gap_y 15
+    no_buffers yes
+    uppercase no
+    cpu_avg_samples 2
+    override_utf8_locale no
+    uppercase no
+
+    # Define some Colors
+    color0 white      # Headings
+    color1 cyan   # Horizonal lines
+    color2 Ivory2      # Text
+    
+    ####
+    ## Load Lua for bargraphs
+    ## Set the path to your script here.
+    #
+    #lua_load ~/.conky/bargraph_small.lua
+    #lua_draw_hook_post main_bars
+    
+    #${exec devilspie}
+    
+        
+    TEXT
+    ###########################
+    # Logo and Linux Mint 14 Text
+    ###########################
+    #${voffset 20}${font Neuropolitical:pixelsize=25}${alignc}Merrill
+    #${voffset -20}${goto 50}${color1}${font Neuropolitical:size=8}
+    ###########################
+    # Time
+    ###########################
+    #${color0}${font Neuropolitical:size=8:bold}Time ${color1} ${hr 2} ${color2}${font}
+    ${voffset 15}${offset -125}${color2}${font Neuropolitical:pixelsize=40}${tztime America/Denver %H:%M}${font}
+    ${alignc -24}${color  white}${font Neuropolitical:pixelsize=11}${time %a %d %b %Y}${font}
+
+    ###########################
+    # System Information
+    ###########################
+    ${color0}${font Neuropolitical:size=8:bold}System ${color1} ${hr 2} ${color2}${font}
+    #${voffset 2}${font OpenLogos:size=10}${color2}s${voffset -4}${font DroidSans:size=8.6}${color2}${offset 5}${pre_exec lsb_release -sd || cat /etc/*release}${font}
+    ${voffset 2}${offset -17}${font OpenLogos:size=12}${color2}B${voffset -4}${font}${color2}${offset 3}${sysname}${offset 3}${kernel}${alignr}${machine}
+    ${voffset 2}${font StyleBats:size=10}${color2}A${voffset -1}${font}${color2}${offset 5}Intel Core i3-3217U${alignr}${freq_g cpu0} GHz
+    ${voffset 2}${font StyleBats:size=10}${color2}z${voffset -1}${font}${color2}${offset 5}Processes${alignr}${alignr}$processes ($running_processes running)
+    ${voffset 2}${font StyleBats:size=10}${color2}2${voffset -1}${font}${color2}${offset 5}Drive Temp${alignr}${hddtemp /dev/sda} C
+    ${voffset 2}${font StyleBats:size=10}${color2}o${voffset -1}${font}${color2}${offset 5}System Uptime${alignr}${uptime_short}
+    ${voffset 2}${font StyleBats:size=10}${color2}q${voffset -1}${font}${color2}${offset 5}Battery Level${alignr}${battery_bar 10,100}
+
+    ###########################
+    # CPU and Processes
+    ###########################
+    ${color0}${font Neuropolitical:size=8:bold}Processors ${color1} ${hr 2} ${color2}${font}
+    ${voffset 4}${font StyleBats:size=9.9}${color2}k${voffset -2}${font DroidSansFallback:size=8.39}${color2}${offset 2}CPU1${offset 5}${font DroidSans:size=8.3}${cpu cpu1}%${font}${alignr}${top_mem name 1}
+    ${voffset 2}${font StyleBats:size=9.9}${color2}k${voffset -2}${font DroidSansFallback:size=8.39}${color2}${offset 2}CPU2${offset 5}${font DroidSans:size=8.3}${cpu cpu2}%${font}${alignr}${top_mem name 2}
+    ${voffset 2}${font StyleBats:size=9.9}${color2}k${voffset -2}${font DroidSansFallback:size=8.39}${color2}${offset 2}CPU3${offset 5}${font DroidSans:size=8.3}${cpu cpu3}%${font}${alignr}${top_mem name 3}
+    ${voffset 2}${font StyleBats:size=9.9}${color2}k${voffset -2}${font DroidSansFallback:size=8.39}${color2}${offset 2}CPU4${offset 5}${font DroidSans:size=8.3}${cpu cpu4}%${font}${alignr}${top_mem name 4} 
+
+    ###########################
+    # Memory and HDDs
+    ###########################
+    ${color0}${font Neuropolitical:size=8:bold}Memory and HDD ${color1} ${hr 2} ${color2}${font}
+    ${voffset 4}${font StyleBats:size=10}${color2}l${voffset -2}${font DroidSansFallback:size=8.3}${color2}${offset 3}RAM${goto 97}${font DroidSans:size=8.3}${mem} / ${memmax}${alignr}${memperc}%${font}
+    ${voffset 15}${font StyleBats:size=9.9}${color2}g${voffset -2}${font DroidSansFallback:size=8.3}${color2}${offset 4}root${goto 95}${font DroidSans:size=8.3}${fs_used /} / ${fs_size /}${alignr}${fs_free_perc /}%${font}
+    ${voffset 15}${font StyleBats:size=9.9}${color2}x${voffset -2}${font DroidSansFallback:size=8.3}${color2}${offset 4}home${goto 95}${font DroidSans:size=8.3}${fs_used /home} / ${fs_size /home}${alignr}${fs_free_perc /home}%${font}
+    ${voffset 15}${font StyleBats:size=9.9}${color2}4${voffset -2}${font DroidSansFallback:size=8.3}${color2}${offset 4}swap${goto 95}${font DroidSans:size=8.3}${swap} / ${swapmax}${alignr}${swapperc}%${font}
+    
+    #########################
+    # Network
+    #########################
+    ${color0}${font Neuropolitical:size=8:bold}Network Info. ${color1} ${hr 2} ${color2}${font}
+    #${if_existing /proc/net/dev_snmp6 wlp2s0}${voffset 6}
+
+    ${alignc}${wireless_essid wlp2s0}
+    ${voffset 6}${font PizzaDude Bullets:size=14}O${font}  ${voffset -1}Up: ${upspeed wlp2s0}${alignr}${upspeedgraph wlp2s0 8,60 black black}
+    ${voffset 4}${font PizzaDude Bullets:size=14}U${font}  ${voffset -1}Down: ${downspeed wlp2s0} ${alignr}${downspeedgraph wlp2s0 8,60 black black}
+    ${voffset 4}${font PizzaDude Bullets:size=14}N${font}  ${voffset -1}Upload: ${alignr}${totalup wlp2s0}
+    ${voffset 4}${font PizzaDude Bullets:size=14}T${font}  ${voffset -1}Download: ${alignr}${totaldown wlp2s0}
+    #${else}${font PizzaDude Bullets:size=14}4${font} Network Status Unavailable
+    #${endif
+     
+    ###########################
+    # Sound & Music
+    ###########################
+    ${color0}${font Neuropolitical:size=8:bold}Music - ${execi 10 playerctl -l}${color1} ${hr 2} ${color2}${font}
+    #${if_running banshee}
+    #${execi 2 playerctl metadata artUrl}
+    ${voffset 4}${font DroidSans:size=8.25}${color3}${alignc}${execi 2 playerctl metadata title}${font}
+    ${voffset 4}${font DroidSans:size=8.25}${color3}${alignc}${execi 2 playerctl metadata artist}${font}
+    ${voffset 4}${font DroidSans:size=8.25}${color3}${alignc}${execi 2 playerctl metadata album}${font} ${voffset 4}${font DroidSans:size=8.25}
+    #${voffset 4}${font DroidSans:size=8.25}${color3}${exec python .conkyscripts/getDuration.py }${font} ${execbar python .conkyscripts/runtimepercent.py} 
+#${else}${alignc}banshee is not running${endif}
+
+    ###########################
+    # Weather
+    ###########################
+    #${color0}${font Neuropolitical:size=8:bold}Weather ${color1} ${hr 2} ${color2}${font}
+    #${if_existing /proc/net/dev_snmp6 wlan0}
+    #$color${execi 600 bash $HOME/.conky/Accuweather_RSS/acc_rss}
+    #${voffset -10}${offset 100}${font Arial Black:size=26}${execpi 600 sed -n '1p' $HOME/.conky/Accuweather_RSS/weather|cut -c1-}${font}
+    #${voffset -45}${font conkyweather:size=60}${execpi 600  sed -n '2p' $HOME/.conky/Accuweather_RSS/weather}${font}
+    #${voffset -20}${font Bold}${execi 600  sed -n '3p' $HOME/.conky/Accuweather_RSS/weather}${font}
+    #${execpi 600 sed -n '4p' $HOME/.conky/Accuweather_RSS/weather|cut -c22-60}
+    #${goto 15}${font conkyweather:size=30}${execpi 600  sed -n '5p' $HOME/.conky/Accuweather_RSS/weather}${font}${goto 70}${voffset -15}${execpi 600 sed -n '4p' $HOME/.conky/Accuweather_RSS/weather|cut -c1-20}${font}
+    #${font Bold}${execi 600  sed -n '6p' $HOME/.conky/Accuweather_RSS/weather}${font}
+    #${execpi 600 sed -n '7p' $HOME/.conky/Accuweather_RSS/weather|cut -c21-60}
+    #${goto 15}${font conkyweather:size=30}${execpi 600  sed -n '8p' $HOME/.conky/Accuweather_RSS/weather}${font}${goto 70}${voffset -15}${execpi 600 sed -n '4p' $HOME/.conky/Accuweather_RSS/weather|cut -c1-20}
+    #${else}${font PizzaDude Bullets:size=14}4${font} Weather Unavailable
+    #${endif}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
