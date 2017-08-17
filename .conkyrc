@@ -53,7 +53,7 @@ background no
     # Time
     ###########################
     #${color0}${font Neuropolitical:size=8:bold}Time ${color1} ${hr 2} ${color2}${font}
-    ${voffset 15}${offset -125}${color2}${font Neuropolitical:pixelsize=40}${tztime America/Denver %H:%M}${font}
+    ${voffset 10}${offset -150}${color2}${font Neuropolitical:pixelsize=40}${tztime America/Denver %H:%M}${font}
     ${alignc -24}${color  white}${font Neuropolitical:pixelsize=11}${time %a %d %b %Y}${font}
 
     ###########################
