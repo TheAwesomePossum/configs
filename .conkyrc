@@ -47,7 +47,7 @@ background no
     ###########################
     # Logo and Linux Mint 14 Text
     ###########################
-    #${voffset 20}${font Neuropolitical:pixelsize=25}${alignc}Merrill
+    ${voffset 20}${font Neuropolitical:pixelsize=25}${alignc}${nodename}
     #${voffset -20}${goto 50}${color1}${font Neuropolitical:size=8}
     ###########################
     # Time
