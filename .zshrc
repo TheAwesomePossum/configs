@@ -112,19 +112,27 @@ function bluetooth () {
     echo Computer Hidden
 }
 
-function update-home-from-git () {
+function git-home-hide () {
+    mv ~/.git ~/.githome
+}
+
+function git-home-show () {
+    mv ~/.githome ~/.git
+}
+
+function git-home-update () {
     mv ~/.githome ~/.git
     git pull
     mv ~/.git ~/.githome
 }
 
-function add-to-home-git () {
+function git-home-add () {
     mv ~/.githome ~/.git
     git add $1
     mv ~/.git ~/.githome
 }
 
-function push-home-to-git () {
+function git-home-push () {
     mv ~/.githome ~/.git
     git commit -a
     git push
