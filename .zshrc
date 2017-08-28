@@ -99,6 +99,9 @@ function update-all () {
     update-pacman
     echo Updating AUR
     update-aur
+    echo Updating home git
+    git-home-update
+    source .zshrc
 }
 
 alias startbluetooth="systemctl start bluetooth.service"
@@ -141,3 +144,4 @@ function git-home-push () {
 
 alias vi=vim
 #export PATH =${PATH}:/home/gmontgomery/tizen-studio/*
+eval $(thefuck --alias)
