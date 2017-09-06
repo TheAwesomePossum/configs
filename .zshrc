@@ -52,6 +52,9 @@ plugins=(git)
 
 export PYTHONPATH="${PYTHONPATH}:/home/gmontgomery/Projects:/home/gmontgomery/Projects/ReactivePanda"
 
+export EDITOR='vim'
+export VISUAL='vim'
+
 export MAVEN_OPTS="-Xmx3000m"
 #export JAVA_HOME="/home/gmontgomery/.userPrograms/jdk1.8.0_121"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -89,6 +92,7 @@ alias spotify="spotify &"
 alias pidgin="pidgin &"
 alias vblist="vboxmanage list vms"
 alias vbh="vboxheadless -s"
+alias eclimd=".eclipse/org.eclipse.platform_4.7.0_155965261_linux_gtk_x86_64/eclimd"
 
 
 alias update-pacman="sudo pacman -Syyu"
