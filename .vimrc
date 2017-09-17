@@ -21,7 +21,7 @@ call vundle#end()
 
 autocmd BufNewFile,BufRead *.ts set syntax=typescript
 
-let g:jedi#use_splits_not_buffers = "left"
+let g:jedi#use_splits_not_buffers = "right"
 
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 nmap <leader>jI <Plug>(JavaComplete-Imports-AddMissing)
