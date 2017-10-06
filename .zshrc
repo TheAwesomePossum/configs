@@ -93,7 +93,7 @@ alias pidgin="pidgin &"
 alias vblist="vboxmanage list vms"
 alias vbh="vboxheadless -s"
 alias eclimd=".eclipse/org.eclipse.platform_4.7.0_155965261_linux_gtk_x86_64/eclimd"
-
+alias govcloudrdp="xfreerdp /f /u:graham.montgomery /d:mabiaf.com /v:odindev1.mabiaf.com"
 
 alias update-pacman="sudo pacman -Syyu"
 alias update-aur="yaourt -Syu --aur"

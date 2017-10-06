@@ -14,8 +14,12 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jaredly/vim-debug'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
+
+map <C-p> :NERDTreeToggle<CR>
 
 " TypeScript Things
 autocmd BufNewFile,BufRead *.ts set syntax=typescript
