@@ -16,6 +16,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jaredly/vim-debug'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
+Plugin 'gisphm/vim-gradle'
 
 call vundle#end()
 
@@ -103,7 +104,5 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set nocompatible
-
-
 
 syntax on
