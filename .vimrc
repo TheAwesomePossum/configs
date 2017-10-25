@@ -28,6 +28,10 @@ autocmd BufNewFile,BufRead *.ts set syntax=typescript
 " Python things
 let g:jedi#use_splits_not_buffers = "left"
 
+" Nerdtree things
+let NERDTreeShowLineNumbers=1
+
+" for tabs
 set showtabline=2  " 0, 1 or 2; when to use a tab pages line
 set tabline=%!MyTabLine()  " custom tab pages line
 function MyTabLine()
