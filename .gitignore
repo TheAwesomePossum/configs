@@ -2,4 +2,4 @@
 !.oh-my-zsh/themes/awesomepossum.zsh-theme
 
 .vim/*
-!.vim/bundles/Vundle.vim
+!.vim/bundle/Vundle.vim/*
