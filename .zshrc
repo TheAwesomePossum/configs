@@ -1,10 +1,11 @@
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+export ZSH=/usr/share/oh-my-zsh/
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+ZSH_CUSTOM=~/.oh-my-zsh
 ZSH_THEME="awesomepossum"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -59,7 +60,7 @@ export MAVEN_OPTS="-Xmx3000m"
 #export JAVA_HOME="/home/gmontgomery/.userPrograms/jdk1.8.0_121"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source ~/.oh-my-zsh/oh-my-zsh.sh
+source /usr/share/oh-my-zsh/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

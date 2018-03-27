@@ -1,4 +1,5 @@
-filetype plugin indent on
+set nocompatible
+filetype off
 
 " Vundle Packages
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -19,6 +20,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'gisphm/vim-gradle'
 
 call vundle#end()
+
+filetype plugin indent on
 
 map <C-p> :NERDTreeToggle<CR>
 
