@@ -62,7 +62,8 @@ background no
     ${color0}${font Neuropolitical:size=8:bold}System ${color1} ${hr 2} ${color2}${font}
     #${voffset 2}${font OpenLogos:size=10}${color2}s${voffset -4}${font DroidSans:size=8.6}${color2}${offset 5}${pre_exec lsb_release -sd || cat /etc/*release}${font}
     ${voffset 2}${offset -14}${font OpenLogos:size=12}${color2}B${voffset -4}${font}${color2}${offset 3}${sysname}${offset 3}${kernel}${alignr}${machine}
-    ${voffset 2}${font StyleBats:size=10}${color2}A${voffset -1}${font}${color2}${offset 5}Intel Core i3-3217U${alignr}${freq_g cpu0} GHz
+    ${voffset 2}${font StyleBats:size=10}${color2}A${voffset -1}${font}${color2}${offset 5}${execi 1000 cat -n /proc/cpuinfo | grep -m1 'model name' | cut -c 21-47
+}${alignr}${freq_g cpu0} GHz
     ${voffset 2}${font StyleBats:size=10}${color2}z${voffset -1}${font}${color2}${offset 5}Processes${alignr}${alignr}$processes ($running_processes running)
     ${voffset 2}${font StyleBats:size=10}${color2}2${voffset -1}${font}${color2}${offset 5}Drive Temp${alignr}${hddtemp /dev/sda} C
     ${voffset 2}${font StyleBats:size=10}${color2}o${voffset -1}${font}${color2}${offset 5}System Uptime${alignr}${uptime_short}
