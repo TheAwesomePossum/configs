@@ -50,7 +50,7 @@ plugins=(git)
 
 # User configuration
 
-
+#export LD_LIBRARY_PATH=/home/gmontgomery/Projects/CAOSD/caosd-worker/components/com.numerica.kratos/lib/
 export PYTHONPATH="${PYTHONPATH}:/home/gmontgomery/Projects:/home/gmontgomery/Projects/ReactivePanda"
 
 export EDITOR='vim'
