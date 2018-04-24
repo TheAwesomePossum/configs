@@ -50,8 +50,10 @@ plugins=(git)
 
 # User configuration
 
-#export LD_LIBRARY_PATH=/home/gmontgomery/Projects/CAOSD/caosd-worker/components/com.numerica.kratos/lib/
+export LD_LIBRARY_PATH="/applications/caosd/lib"
+export JAVA_HOME="/usr/lib/jvm/java-8-jdk"
 export PYTHONPATH="${PYTHONPATH}:/home/gmontgomery/Projects:/home/gmontgomery/Projects/ReactivePanda"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 export EDITOR='vim'
 export VISUAL='vim'
@@ -98,6 +100,11 @@ alias govcloudrdp="xfreerdp /f /u:graham.montgomery /d:mabiaf.com /v:odindev1.ma
 alias update-pacman="sudo pacman -Syyu"
 alias update-aur="yaourt -Syu --aur"
 alias umount="sudo umount"
+
+alias ethOff="sudo ip link set enp0s31f6 down"
+alias ethOn="sudo ip link set enp0s31f6 up"
+alias wifiStart="sudo netctl start"
+alias wifiStop="sudo netctl stop"
 
 function update-all () {
     echo Updating Pacman

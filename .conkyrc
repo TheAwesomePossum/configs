@@ -20,32 +20,34 @@ background no
     default_shade_color black
     default_outline_color green
     alignment top_left
-    gap_x 15 
+    gap_x 15
     gap_y 15
     no_buffers yes
     uppercase no
     cpu_avg_samples 2
     override_utf8_locale no
     uppercase no
+    template8 ~/.conkyscripts/weather_update.py
+    template9 ~/.conkytmp/conky_results
 
     # Define some Colors
     color0 white      # Headings
     color1 cyan   # Horizonal lines
     color2 white      # Text
-    
+
     ####
     ## Load Lua for bargraphs
     ## Set the path to your script here.
     #
     #lua_load ~/.conky/bargraph_small.lua
     #lua_draw_hook_post main_bars
-    
+
     #${exec devilspie}
-    
-        
+
+
     TEXT
     ###########################
-    # Logo and Linux Mint 14 Text
+    # Computer/Host Name
     ###########################
     ${voffset 20}${font Neuropolitical:pixelsize=25}${alignc}${nodename}
     #${voffset -20}${goto 50}${color1}${font Neuropolitical:size=8}
@@ -76,11 +78,11 @@ background no
     ${voffset 4}${font StyleBats:size=9.9}${color2}k${voffset -2}${font DroidSansFallback:size=8.39}${color2}${offset 2}CPU1${offset 5}${font DroidSans:size=8.3}${cpu cpu1}%${font}${alignr}${top_mem name 1}
     ${voffset 2}${font StyleBats:size=9.9}${color2}k${voffset -2}${font DroidSansFallback:size=8.39}${color2}${offset 2}CPU2${offset 5}${font DroidSans:size=8.3}${cpu cpu2}%${font}${alignr}${top_mem name 2}
     ${voffset 2}${font StyleBats:size=9.9}${color2}k${voffset -2}${font DroidSansFallback:size=8.39}${color2}${offset 2}CPU3${offset 5}${font DroidSans:size=8.3}${cpu cpu3}%${font}${alignr}${top_mem name 3}
-    ${voffset 2}${font StyleBats:size=9.9}${color2}k${voffset -2}${font DroidSansFallback:size=8.39}${color2}${offset 2}CPU4${offset 5}${font DroidSans:size=8.3}${cpu cpu4}%${font}${alignr}${top_mem name 4} 
-    ${voffset 2}${font StyleBats:size=9.9}${color2}k${voffset -2}${font DroidSansFallback:size=8.39}${color2}${offset 2}CPU5${offset 5}${font DroidSans:size=8.3}${cpu cpu5}%${font}${alignr}${top_mem name 4} 
-    ${voffset 2}${font StyleBats:size=9.9}${color2}k${voffset -2}${font DroidSansFallback:size=8.39}${color2}${offset 2}CPU6${offset 5}${font DroidSans:size=8.3}${cpu cpu6}%${font}${alignr}${top_mem name 4} 
-    ${voffset 2}${font StyleBats:size=9.9}${color2}k${voffset -2}${font DroidSansFallback:size=8.39}${color2}${offset 2}CPU7${offset 5}${font DroidSans:size=8.3}${cpu cpu7}%${font}${alignr}${top_mem name 4} 
-    ${voffset 2}${font StyleBats:size=9.9}${color2}k${voffset -2}${font DroidSansFallback:size=8.39}${color2}${offset 2}CPU8${offset 5}${font DroidSans:size=8.3}${cpu cpu8}%${font}${alignr}${top_mem name 4} 
+    ${voffset 2}${font StyleBats:size=9.9}${color2}k${voffset -2}${font DroidSansFallback:size=8.39}${color2}${offset 2}CPU4${offset 5}${font DroidSans:size=8.3}${cpu cpu4}%${font}${alignr}${top_mem name 4}
+    ${voffset 2}${font StyleBats:size=9.9}${color2}k${voffset -2}${font DroidSansFallback:size=8.39}${color2}${offset 2}CPU5${offset 5}${font DroidSans:size=8.3}${cpu cpu5}%${font}${alignr}${top_mem name 4}
+    ${voffset 2}${font StyleBats:size=9.9}${color2}k${voffset -2}${font DroidSansFallback:size=8.39}${color2}${offset 2}CPU6${offset 5}${font DroidSans:size=8.3}${cpu cpu6}%${font}${alignr}${top_mem name 4}
+    ${voffset 2}${font StyleBats:size=9.9}${color2}k${voffset -2}${font DroidSansFallback:size=8.39}${color2}${offset 2}CPU7${offset 5}${font DroidSans:size=8.3}${cpu cpu7}%${font}${alignr}${top_mem name 4}
+    ${voffset 2}${font StyleBats:size=9.9}${color2}k${voffset -2}${font DroidSansFallback:size=8.39}${color2}${offset 2}CPU8${offset 5}${font DroidSans:size=8.3}${cpu cpu8}%${font}${alignr}${top_mem name 4}
 
     ###########################
     # Memory and HDDs
@@ -90,7 +92,7 @@ background no
     ${voffset 15}${font StyleBats:size=9.9}${color2}g${voffset -2}${font DroidSansFallback:size=8.3}${color2}${offset 4}root${goto 95}${font DroidSans:size=8.3}${fs_used /} / ${fs_size /}${alignr}${fs_free_perc /}%${font}
     ${voffset 15}${font StyleBats:size=9.9}${color2}x${voffset -2}${font DroidSansFallback:size=8.3}${color2}${offset 4}home${goto 95}${font DroidSans:size=8.3}${fs_used /home} / ${fs_size /home}${alignr}${fs_free_perc /home}%${font}
     ${voffset 15}${font StyleBats:size=9.9}${color2}4${voffset -2}${font DroidSansFallback:size=8.3}${color2}${offset 4}swap${goto 95}${font DroidSans:size=8.3}${swap} / ${swapmax}${alignr}${swapperc}%${font}
-    
+
     #########################
     # Network
     #########################
@@ -101,17 +103,15 @@ background no
         ${voffset 4}${font PizzaDude Bullets:size=14}U${font}  ${voffset -1}Down: ${downspeed wlp2s0} ${alignr}${downspeedgraph wlp2s0 8,60 black black}
         ${voffset 4}${font PizzaDude Bullets:size=14}N${font}  ${voffset -1}Upload: ${alignr}${totalup wlp2s0}
         ${voffset 4}${font PizzaDude Bullets:size=14}T${font}  ${voffset -1}Download: ${alignr}${totaldown wlp2s0}
-    ${else}
+    ${endif}
     ${if_existing /proc/net/route enp0s31f6}
         ${alignc}${voffset -16}Ethernet
         ${voffset 4}${font PizzaDude Bullets:size=14}O${font}  ${voffset -1}Up: ${upspeed enp0s31f6}${alignr}${upspeedgraph enp0s31f6 8,60 black black}
         ${voffset 4}${font PizzaDude Bullets:size=14}U${font}  ${voffset -1}Down: ${downspeed enp0s31f6} ${alignr}${downspeedgraph enp0s31f6 8,60 black black}
         ${voffset 4}${font PizzaDude Bullets:size=14}N${font}  ${voffset -1}Upload: ${alignr}${totalup enp0s31f6}
         ${voffset 4}${font PizzaDude Bullets:size=14}T${font}  ${voffset -1}Download: ${alignr}${totaldown enp0s31f6}
-    #${else}      
-    #    ${font PizzaDude Bullets:size=14}4${font} Network Status Unavailable
     ${endif}
-     
+
     ###########################
     # Sound & Music
     ###########################
@@ -121,9 +121,16 @@ background no
     ${voffset 4}${font DroidSans:size=8.25}${color3}${alignc}${execi 2 playerctl metadata title}${font}
     ${voffset 4}${font DroidSans:size=8.25}${color3}${alignc}${execi 2 playerctl metadata artist}${font}
     ${voffset 4}${font DroidSans:size=8.25}${color3}${alignc}${execi 2 playerctl metadata album}${font} ${voffset 4}${font DroidSans:size=8.25}
-    #${voffset 4}${font DroidSans:size=8.25}${color3}${exec python .conkyscripts/getDuration.py }${font} ${execbar python .conkyscripts/runtimepercent.py} 
+    #${voffset 4}${font DroidSans:size=8.25}${color3}${exec python .conkyscripts/getDuration.py }${font} ${execbar python .conkyscripts/runtimepercent.py}
 #${else}${alignc}banshee is not running${endif}
 
+    ###############
+    ##  WEATHER  ##
+    ###############
+    #${color0}${font Neuropolitical:size=8:bold}Weather ${color1} ${hr 2} ${color2}${font}
+    #${eval ${execi 5 cat ${template9}}}
+    #${execi 5 python ${template8}}
+    #${exec kill -CONT $(pidof conky)}
     ###########################
     # Weather
     ###########################
